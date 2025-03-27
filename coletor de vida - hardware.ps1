@@ -66,5 +66,4 @@ $($diskInfo -join "`n")
 # Salva o relatório no arquivo de log
 $report | Out-File -FilePath $logPath -Encoding utf8 -Append
 
-# Exibe a saída no Tactical RMM
-Write-Output "$report"
+

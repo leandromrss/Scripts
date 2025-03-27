@@ -62,5 +62,3 @@ if ($rebootPending) {
 } else {
     Write-Output "[$dataHoraExecucao] Atualizacoes concluídas sem necessidade de reinicio." | Out-File -FilePath $logPath -Encoding utf8 -Append
 }
- 
-# Exibe a saída no Tactical
