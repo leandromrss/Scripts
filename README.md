@@ -33,7 +33,7 @@ Este repositório contém uma coleção de scripts PowerShell para automação e
 
 ## 🖨️ Script de Desfragmentação do Spooler
 
-### Desfragmenta_Spooler_RemoveApp.ps1
+### desfragmenta_spooler.ps1
 
 Este script realiza as seguintes operações:
 
@@ -43,12 +43,8 @@ Este script realiza as seguintes operações:
    - Reinicia o serviço
    - Verifica o status do serviço
 
-2. **Remoção de Aplicativos**
-   - Remove aplicativos específicos do sistema
-   - Verifica a remoção bem-sucedida
-   - Registra logs de operação
 
-3. **Funcionalidades Adicionais**
+2. **Funcionalidades Adicionais**
    - Geração de logs detalhados
    - Verificação de permissões
    - Tratamento de erros
