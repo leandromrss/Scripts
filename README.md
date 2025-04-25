@@ -31,6 +31,39 @@ Este repositório contém uma coleção de scripts PowerShell para automação e
 ## 📢 Scripts de Notificação
 - **notifica-ballon.ps1**: Script para envio de notificações via balão do Windows
 
+## 🖨️ Script de Desfragmentação do Spooler
+
+### Desfragmenta_Spooler_RemoveApp.ps1
+
+Este script realiza as seguintes operações:
+
+1. **Desfragmentação do Spooler de Impressão**
+   - Para o serviço de spooler
+   - Limpa a fila de impressão
+   - Reinicia o serviço
+   - Verifica o status do serviço
+
+2. **Remoção de Aplicativos**
+   - Remove aplicativos específicos do sistema
+   - Verifica a remoção bem-sucedida
+   - Registra logs de operação
+
+3. **Funcionalidades Adicionais**
+   - Geração de logs detalhados
+   - Verificação de permissões
+   - Tratamento de erros
+   - Notificações de status
+
+### Requisitos Específicos
+- Permissões de administrador
+- Serviço de spooler de impressão instalado
+- Acesso ao registro do Windows
+
+### Observações Importantes
+- Faça backup antes de executar
+- Verifique os logs após a execução
+- Pode requerer reinicialização do sistema
+
 ## 🛠️ Requisitos
 
 - Windows 10 ou superior
