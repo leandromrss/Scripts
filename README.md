@@ -60,6 +60,54 @@ Este script realiza as seguintes operações:
 - Verifique os logs após a execução
 - Pode requerer reinicialização do sistema
 
+
+## 💾 Instalador via Pendrive (PowerShell)
+
+Este script permite a instalação automatizada de softwares a partir de um pendrive, mesmo quando a letra da unidade varia entre máquinas (D:, E:, F:, etc.).
+
+### 🔧 Funcionalidades principais
+
+- **Detecção automática** da unidade do pendrive via arquivo marcador `flag_usb.txt`  
+- **Instalação silenciosa** dos aplicativos (via `/S`, `/silent`, etc.)  
+- **Alta flexibilidade** — basta adicionar novos instaladores no bloco de configuração
+
+### 📁 Estrutura esperada no pendrive
+
+<UNIDADE>:\
+├── flag_usb.txt ← marcador (pode estar vazio)
+├── instalar.ps1 ← script principal em PowerShell
+├── instalar.bat ← atalho prático para usuários finais
+└── Apps\ ← pasta com os instaladores
+├── Adobe.exe
+├── AnyDesk.exe
+├── ChromeSetup.exe
+├── winrar‑x64‑561br.exe
+└── hdsentinel_pro_setup.exe
+
+
+### ▶️ Como usar
+
+1. Insira o pendrive.  
+2. Clique com o botão direito em **`instalar.bat`** e selecione *"Executar como administrador"*.  
+3. O script será executado automaticamente, identificando a letra da unidade e instalando os softwares listados.
+
+### ✍️ Personalizando os aplicativos
+
+Para adicionar ou remover instaladores, edite este trecho no `instalar.ps1`:
+
+```powershell
+$aplicativos = @(
+    @{ Nome = "Adobe.exe";              Argumentos = "/silent" },
+    @{ Nome = "AnyDesk.exe";            Argumentos = "/S" },
+    @{ Nome = "ChromeSetup.exe";        Argumentos = "/silent" },
+    @{ Nome = "winrar‑x64‑561br.exe";   Argumentos = "/S" },
+    @{ Nome = "hdsentinel_pro_setup.exe"; Argumentos = "/S" }
+)
+```
+Basta manter o nome exatamente igual ao do arquivo dentro da pasta Apps e ajustar o argumento conforme o instalador exige.
+
+💡 Ideial para técnicos de TI, suporte e cenários de instalação em lote — leve, portátil e eficiente!
+
 ## 🛠️ Requisitos
 
 - Windows 10 ou superior
@@ -80,6 +128,7 @@ Cada script gera seus próprios logs:
 - Logs de erro
 - Logs de sucesso
 - Métricas de performance
+---
 
 ## 🔧 Personalização
 
