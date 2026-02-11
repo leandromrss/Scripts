@@ -1,7 +1,3 @@
-Perfeito, Leandro. Vou ajustar seu README com base na nova estrutura sugerida (scripts/maintenance, diagnostics, printing, onboarding, utils), deixando ele mais profissional, organizado por domínio e com cara de portfólio de automação.
-
-Abaixo está a versão reestruturada e pronta para substituir completamente o seu README atual 
-
 README
 
 🛠️ Automation Toolkit – PowerShell Scripts
